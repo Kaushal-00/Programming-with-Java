@@ -10,34 +10,43 @@ The `Scanner` class in Java is part of the `java.util` package and is commonly u
 ### Common Methods of the `Scanner` Class:
 Here are some of the commonly used methods in `Scanner`:
 
-1. **`nextInt()`**: Reads the next integer.
+1.**`System.in`** : 
+  - It is a **predefined input stream** in Java that is connected to the **keyboard** by default. 
+  - It is part of the `System` class in `java.lang` and represents **standard input (stdin)**.
+  - It is an instance of the `InputStream` class.
+  - It reads input as raw bytes (binary data). The `Scanner` class helps **convert** those bytes into readable data types like `int`, `double`, or `String`.
+  ````java
+  Scanner scanner = new Scanner(System.in);
+  ````
+
+2. **`nextInt()`**: Reads the next integer.
    ```java
    int num = scanner.nextInt();
    ```
 
-2. **`nextDouble()`**: Reads the next double value.
+3. **`nextDouble()`**: Reads the next double value.
    ```java
    double num = scanner.nextDouble();
    ```
 
-3. **`nextLine()`**: Reads the next entire line of input as a `String`.
+4. **`nextLine()`**: Reads the next entire line of input as a `String`.
    ```java
    String text = scanner.nextLine();
    ```
 
-4. **`next()`**: Reads the next token (word) from the input as a `String`.
+5. **`next()`**: Reads the next token (word) from the input as a `String`.
    ```java
    String word = scanner.next();
    ```
 
-5. **`hasNext()`**: Checks if there is another token in the input.
+6. **`hasNext()`**: Checks if there is another token in the input.
    ```java
    if (scanner.hasNext()) {
        // Process next input
    }
    ```
 
-6. **`close()`**: Closes the `Scanner` object to release resources after usage.
+7. **`close()`**: Closes the `Scanner` object to release resources after usage.
    ```java
    scanner.close();
    ```
