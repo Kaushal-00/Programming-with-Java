@@ -1,4 +1,4 @@
-## Practical-2.2:
+## Practical-2.3:
 
 - Write a program to demonstrate usage of different methods of
 Wrapper class.
