@@ -10,7 +10,7 @@ class Outer {
     }
 }
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         Outer outer = new Outer(); // Creating Outer class object
         outer.display(); // Calling method that contains Inner class
