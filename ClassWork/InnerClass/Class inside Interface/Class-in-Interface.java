@@ -6,7 +6,7 @@ interface Animal {
     }
 }
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         
         Animal.Dog dog = new Animal.Dog();
