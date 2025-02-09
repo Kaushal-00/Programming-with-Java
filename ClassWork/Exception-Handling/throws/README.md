@@ -102,5 +102,3 @@ Exception handled: java.lang.ArithmeticException: / by zero
 | Placement | Inside a method | In method signature |
 | Number of Exceptions | Throws only one exception at a time | Can declare multiple exceptions |
 | Example | `throw new ArithmeticException("Error");` | `void method() throws IOException, SQLException` |
-
----
