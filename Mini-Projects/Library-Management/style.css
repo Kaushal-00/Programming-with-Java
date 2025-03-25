@@ -1,0 +1,31 @@
+body {
+    font-family: Arial;
+    background: #f0f0f0;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .form input, .form select {
+    margin: 10px;
+    padding: 8px;
+    width: 200px;
+  }
+  
+  button {
+    padding: 8px 15px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  
+  #message {
+    color: #0066cc;
+    margin-top: 20px;
+  }
+  
