@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Library Management System</h1>
+
+  <div class="form">
+    <input type="text" id="username" placeholder="Enter username">
+    <select id="usertype">
+      <option value="student">Student</option>
+      <option value="faculty">Faculty</option>
+    </select>
+    <input type="text" id="bookname" placeholder="Enter book name">
+    <button onclick="borrowBook()">Borrow</button>
+    <button onclick="returnBook()">Return</button>
+  </div>
+
+  <p id="message"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
