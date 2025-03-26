@@ -1,6 +1,6 @@
 ## Practical-4.1:
 
-- Create class Cricket that has, data members  and member methods . 
+- Create class Cricket that has, data members and member methods. 
 
     **Data Members:**
     - name

@@ -1,3 +1,0 @@
-Java Basics,true
-Data Structures,true
-OOP Concepts,true
