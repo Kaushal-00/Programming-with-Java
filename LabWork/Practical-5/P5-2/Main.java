@@ -1,8 +1,8 @@
-public class Main{
+public class Main {
 
     public static void main(String[] args) {
         // Static Inner Class
-        StaticInner staticInner = new StaticInner();
+        InnerClassDemo.StaticInner staticInner = new InnerClassDemo.StaticInner();
         staticInner.show();
 
         // Local Inner Class
