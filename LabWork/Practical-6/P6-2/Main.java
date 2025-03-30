@@ -5,9 +5,8 @@ public class Main {
         intStack.push(10);
         intStack.push(20);
         intStack.push(30);
-        intStack.display();
-
-        System.out.println("Popped: " + intStack.pop());
+        intStack.pop();
+        intStack.peek();
         intStack.display();
 
         // String Stack

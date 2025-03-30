@@ -11,7 +11,7 @@ public class GenericStack<T> {
 
     void push(T element) {
         if (isFull()) {
-            System.out.println("Stack Overflow! Cannot push " + element);
+            System.out.println("Stack Overflow!");
             return;
         } else {
             stack[++top] = element;
@@ -19,12 +19,12 @@ public class GenericStack<T> {
         }
     }
 
-    T pop() {
+    void pop() {
         if (isEmpty()) {
             System.out.println("Stack Underflow!");
-            return null;
+            return;
         } else {
-            return stack[top--];
+            top--;
         }
     }
 
@@ -33,7 +33,8 @@ public class GenericStack<T> {
             System.out.println("Stack is empty.");
             return null;
         } else {
-            return stack[top];
+            System.out.println("Top element: " + stack[top]);
+            return null;
         }
     }
 
