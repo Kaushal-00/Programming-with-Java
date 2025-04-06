@@ -2,6 +2,7 @@
 
 - When two or more threads access shared resources (like variables, files, objects) at the same time, it can cause data inconsistency or errors.
 - Thread Synchronization is a technique that ensures only one thread at a time can access a shared resource or critical section.
+- synchronized is used to **lock** an object so only one thread can access a block of code at a time.
 
 ---
 
