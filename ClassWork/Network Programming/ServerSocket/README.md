@@ -1,4 +1,4 @@
-## **`ServerSocket`:**
+## **ServerSocket:**
 
 - The `ServerSocket` class is used on the server-side of a network connection.  
 - Its job is to wait for clients to connect to it over a specific port number.
@@ -11,7 +11,7 @@
 - To wait for incoming client connections.
 - To accept those connections and create a `Socket` object to communicate.
 
----**
+---
 
 ### **Constructors:**
 
@@ -35,7 +35,7 @@
 
 ---
 
-## **`accept()` Method:**
+## **accept() Method:**
 
 - The `accept()` method is part of the `ServerSocket` class.  
 - It is used by the server to wait and listen for a client to connect.

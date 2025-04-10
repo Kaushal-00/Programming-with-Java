@@ -5,7 +5,7 @@
 
 ---
 
-### **`InputStream` & `OutputStream`:**
+### **InputStream & OutputStream:**
 
 - These are the base classes used for reading and writing raw bytes between two connected sockets.
     - InputStream → Used to read data.
@@ -22,7 +22,7 @@ OutputStream out = socket.getOutputStream();  // To send data to the other side
 
 ---
 
-### **`DataInputStream` & `DataOutputStream`:**
+### **DataInputStream & DataOutputStream:**
 
 - These are wrapper classes that sit on top of `InputStream` and `OutputStream` and allow you to easily read and write primitive data types (int, float, boolean, etc.) and Strings.
 
