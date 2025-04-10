@@ -37,3 +37,26 @@ Example: 192.168.0.101:5000
 - This is how the client knows where to send the request.
 
 ---
+
+## **Host:**
+
+- The host is the name or IP address of the server that the client wants to connect to.
+
+
+### **Example:**
+
+- When you create a Client in Java like this:
+
+```java
+Socket socket = new Socket("192.168.0.101", 5000);
+```
+
+- `192.168.0.101` is the host (IP address) of the server.
+- `5000` is the port the client is trying to enter to talk to the server.
+
+- You can also use a hostname instead of an IP address:
+
+    - `"localhost"` is just another name for your own computer (IP = 127.0.0.1).
+    - This is useful when both client and server run on the same machine.
+
+---
