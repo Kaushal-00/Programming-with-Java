@@ -80,3 +80,22 @@ public class MyGUI {
 5. **Display the GUI** – Set frame visible.
 
 ---
+
+### **JFrame class:**
+
+- `JFrame` is a class in Java Swing used to create a main window of your GUI application.
+
+---
+
+#### **Methods of JFrame:**
+
+| Method                        | Description |
+|------------------------------|-------------|
+| `setTitle("Title")`          | Sets the title of the window |
+| `setSize(width, height)`     | Sets the size of the window |
+| `setVisible(true/false)`     | Shows or hides the window |
+| `setLayout(...)`             | Sets the layout manager |
+| `add(component)`             | Adds a button, label, etc. |
+| `setDefaultCloseOperation(...)` | Defines what happens when window is closed |
+
+---
