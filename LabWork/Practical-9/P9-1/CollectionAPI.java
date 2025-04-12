@@ -24,7 +24,7 @@ public class CollectionAPI {
         studentList.add(new Student(102, "Henil"));
         studentList.add(new Student(103, "Karan"));
 
-        System.out.println("📋 All Students (ArrayList):");
+        System.out.println("All Students (ArrayList):");
         for (Student s : studentList) {
             System.out.println(s);
         }
@@ -42,7 +42,7 @@ public class CollectionAPI {
 
         studentList.removeIf(s -> s.id == 101);
 
-        System.out.println("\n After Delete (ID: 101):");
+        System.out.println("\nAfter Delete (ID: 101):");
         for (Student s : studentList) {
             System.out.println(s);
         }
@@ -52,7 +52,7 @@ public class CollectionAPI {
         subjects.add("Science");
         subjects.add("English");
 
-        System.out.println("\n📚 Subjects (LinkedList):");
+        System.out.println("\nSubjects (LinkedList):");
         for (String sub : subjects) {
             System.out.println(sub);
         }
@@ -62,7 +62,7 @@ public class CollectionAPI {
         cities.add("Vadodara");
         cities.add("Anand"); // duplicate, won't be added
 
-        System.out.println("\n🏙️ Cities (HashSet - Unique Only):");
+        System.out.println("\nCities (HashSet - Unique Only):");
         for (String city : cities) {
             System.out.println(city);
         }
@@ -82,7 +82,7 @@ public class CollectionAPI {
         studentMap.put(101, "Kaushal");
         studentMap.put(102, "Henil");
 
-        System.out.println("\n📊 Students (TreeMap - Sorted by Key):");
+        System.out.println("\nStudents (TreeMap - Sorted by Key):");
         for (Map.Entry<Integer, String> entry : studentMap.entrySet()) {
             System.out.println("Roll: " + entry.getKey() + ", Name: " + entry.getValue());
         }
