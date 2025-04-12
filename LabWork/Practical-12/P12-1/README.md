@@ -4,6 +4,10 @@
 - TextFields to be included are amount, year, interest rate and future value.
 - The field “future value” (shown in gray) must not be altered by user.
 
+- <p align="center">
+     <img src="Layout.png" alt="Layout" width="400">
+  </p>
+
 ---
 
 ### **Comon Methods:**
