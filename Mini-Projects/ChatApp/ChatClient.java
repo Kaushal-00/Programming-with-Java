@@ -1,61 +1,45 @@
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.Socket;
-import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 public class ChatClient {
-    public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
-        String host;
-        int port = 5000;
+    public static String name;
+    public static String host;
+    public static int port = 5000;
+    public static DataInputStream dis;
+    public static DataOutputStream dos;
 
-        // Ask user where to connect
-        System.out.println("Choose connection option:");
-        System.out.println("1. Connect to localhost");
-        System.out.println("2. Connect to custom IP");
-        System.out.print("Enter choice (1 or 2): ");
-        int choice = Integer.parseInt(scanner.nextLine());
+    public static void main(String[] args) {
+        NameInputWindow.show();
+    }
 
-        if (choice == 1) {
-            host = "localhost";
-        } else {
-            System.out.print("Enter server IP address: ");
-            host = scanner.nextLine();
-        }
+    public static void connectToServer() {
+        try {
+            Socket socket = new Socket(host, port);
+            dis = new DataInputStream(socket.getInputStream());
+            dos = new DataOutputStream(socket.getOutputStream());
 
-        // Connect to chosen host
-        Socket socket = new Socket(host, port);
-        DataInputStream dis = new DataInputStream(socket.getInputStream());
-        DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
+            dis.readUTF();
+            dos.writeUTF(name);
 
-        // Receiving thread
-        Thread readThread = new Thread(new Runnable() {
-            public void run() {
+            ChatWindow.show();
+
+            new Thread(() -> {
                 try {
                     while (true) {
                         String msg = dis.readUTF();
-                        System.out.println(msg);
+                        ChatWindow.addMessage(msg, false);
                     }
                 } catch (IOException e) {
-                    System.out.println("Disconnected from server.");
+                    ChatWindow.addMessage("Disconnected from server.", false);
                 }
-            }
-        });
+            }).start();
 
-        readThread.start();
-
-        // Sending thread
-        while (true) {
-            String message = scanner.nextLine();
-            dos.writeUTF(message);
-
-            if (message.equalsIgnoreCase("exit")) {
-                break;
-            }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Connection failed: " + e.getMessage());
         }
-
-        dis.close();
-        dos.close();
-        socket.close();
-        scanner.close();
     }
 }
